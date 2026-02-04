@@ -1,0 +1,94 @@
+/* Общие настройки */
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: #0f172a;
+    color: #e5e7eb;
+    margin: 0;
+    padding: 40px 16px;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+/* Картинка под заголовком */
+.hero-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 0 auto 24px auto;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* Раскрывающиеся блоки */
+.card {
+    background: #020617;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.card button {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #e5e7eb;
+    padding: 16px;
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+}
+
+.content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 16px;
+    color: #cbd5f5;
+}
+
+.content.open {
+    padding: 16px;
+    max-height: 400px; /* Можно увеличить, если будет больше текста */
+}
+
+/* Галерея фото */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 фото в ряд на маленьких экранах */
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.gallery img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    height: 120px; /* фиксированная высота, можно подкорректировать */
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 400px) {
+    .gallery {
+        grid-template-columns: 1fr; /* один столбец на маленьких экранах */
+    }
+}
+
+/* Текст приглашения под главной фотографией */
+.invite-text {
+    background: #1e293b;       /* чуть светлее фон, чтобы отделялось от картинки */
+    color: #e5e7eb;
+    padding: 16px 20px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+}
